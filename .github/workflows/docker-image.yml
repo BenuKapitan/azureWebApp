@@ -23,6 +23,6 @@ jobs:
     - name: Build the Docker image
       run: |
         echo "IMAGE_TAG=$(date +%s)" >> $GITHUB_ENV
-        docker build . --file Dockerfile --tag ghcr.io/BenuKapitan/azurewebapp:$IMAGE_TAG
+        docker build . --file Dockerfile --tag ghcr.io/benukapitan/azurewebapp:$IMAGE_TAG
         docker login ghcr.io -u BenuKapitan -p ${{secrets.GHCR_TOKEN}}
-        docker push ghcr.io/BenuKapitan/azurewebapp:$IMAGE_TAG
+        docker push ghcr.io/benukapitan/azurewebapp:$IMAGE_TAG
